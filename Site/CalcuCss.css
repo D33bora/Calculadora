@@ -1,0 +1,341 @@
+@font-face {
+    font-family: pixel;
+    src: url(../Calculadora/Better\ VCR\ 9.0.1.ttf);
+}
+
+@font-face {
+    font-family: lemon;
+    src: url(../Calculadora/LEMONMILK-Light.otf);
+}
+
+body
+{
+    background-color: #E2ADF2;
+}
+
+.desligado, .total
+{
+    font-size: 55px;
+    background-color: #E2ADF2;
+    color: black;
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 9px black;
+    transition: 0.5s;
+    font-family: lemon;
+}
+
+.desligado:hover
+{
+  background-color: #654597;
+  transition: 0.5s;
+}
+
+.desligado:active
+{
+    background-color: #AB81CD;
+}
+
+.total:hover, .desligado:hover
+{
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0px 3px black;
+    font-size: 60px;
+    /* padding-right: 50px; */
+}
+
+
+
+#btnDeletar img
+{
+    border: 0px;
+    border-radius: 0px;
+}
+
+h1
+{
+    /* -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white; */
+    
+    font-size: 60px;
+    font-family: lemon;
+    justify-content: center;
+    display: flex;
+    background-color: red;
+    background-image: linear-gradient(to right, #654597, #222A68);
+    background-size: 3000px;
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#tela
+{
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    margin-left: 25%;
+    margin-bottom: 50px;
+    width: 50%;
+    height: 103;
+    padding-top: 20px;
+    background-color: #AB81CD;
+    color: white;
+    border: 3px solid white;
+    border-radius: 20px;
+    font-family: pixel;
+    font-size: 60px;
+    box-shadow: inset 3px -1px 15px 0px #654597;
+}
+
+#label
+{
+    font-size: 20px;
+    position: absolute;
+    top: 180px;
+    left: 440px;
+    color: white;
+    font-family: pixel;
+}
+
+.botoes
+{
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 4fr;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-gap: 10px;
+}
+
+#btnTotal:hover
+{
+    background-color: #222A68;
+}
+
+#btnTotal:active
+{
+    background-color: #654597;
+}
+
+#delete
+{
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#btnDeletar :hover
+{
+    content: url(../Calculadora/img/apagar1.png);
+}
+
+#blob2
+{
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    width: 500px;
+    height: 300px;
+    left: -20px;
+}
+
+#blob1
+{
+    position: absolute;
+    z-index: -2;
+    top: -30px;
+    rotate: -180deg;
+    right: 0px;
+    width: 200px;
+    height: 500px;
+}
+
+#flor1, #flor2
+{
+    position: absolute;
+    transition-duration: 1.5s;
+}
+
+#flor1
+{
+    top: 270px;
+    right: 100px;
+    width: 150px;
+    height: 150px;
+}
+
+#flor2
+{
+    bottom: 50px;
+    left: 250px;
+}
+
+#flor1:hover, #flor2:hover
+{
+    cursor: pointer;
+    animation: girar ease 2s infinite;
+}
+
+@keyframes girar
+{
+    from
+    {
+        rotate: 0deg;
+    }
+
+    to 
+    {
+        rotate: 360deg;
+    }
+}
+
+#degrade1
+{
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    z-index: -5;
+    background: radial-gradient(#8a66c3,#E2ADF2 70%);
+    top: -200px;
+    left: -100px;
+    animation: mover1 10s ease infinite;
+}
+
+#degrade2
+{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    z-index: -6;
+    background: radial-gradient(#8a66c3, #E2ADF2 70%);
+    bottom: 300px;
+    right: 20px;
+    animation: mover2 12s ease infinite;
+}
+
+@keyframes mover1 
+{
+    10% 
+    {
+        top: -200px;
+        left: -100px;
+    }
+
+    50% 
+    {
+        top: -100px;
+        left: -400px;
+    }
+
+    100%
+    {
+        top: -200px;
+        left: -100px;
+    }
+}
+
+@keyframes mover2
+{
+    10% 
+    {
+        bottom: 300px;
+        right: 20px;
+    }
+
+    50%
+    {
+        bottom: 100px;
+        right: 0px;
+    }
+
+    100%
+    {
+        bottom: 300px;
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width:640px)
+{
+    .desligado, .total
+    {
+        font-size: 30px;
+        /* background-size: 10px; */
+    }
+
+    #tela
+    {
+        font-size: 30px;
+        width: 85%;
+        margin-left: 6%;
+        transition-duration: 0.5s;
+    }
+
+    h1 
+    {
+        font-size: 45px;
+        margin-top: 100px;
+    }
+
+    #label
+    {
+        max-width: 40%;
+        top: 19%;
+        left: 27%;
+    }
+
+    .botoes
+    {
+        
+        grid-template-columns: 100px 100px 100px 100px;
+        /* width: 10%; */
+    }
+
+    #blob2
+    {
+        width: 300px;
+        height: 150px;
+    }
+
+    #blob1
+    {
+        width: 100px;
+        height: 300px;
+    }
+
+    #degrade1
+    {
+        width: 250px;
+        height: 250px;
+        top: -20px;
+        left: -10px;
+        animation: mover 10s ease infinite;
+    }
+
+    @keyframes mover 
+    {
+        10% 
+        {
+            top: -100px;
+            left: -10px;
+        }
+
+        50% 
+        {
+            top: 10px;
+            left: -70px;
+        }
+
+        100%
+        {
+            top: -10px;
+            left: -10px;
+        }
+    }
+}

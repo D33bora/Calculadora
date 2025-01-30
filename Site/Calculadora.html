@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora!!!!</title>
+    <link rel="stylesheet" href="CalcuCss.css">
+    
+
+</head>
+
+<body>
+
+    <h1>Calculadora</h1>
+    <input type="text" id="tela" ></label>
+    <label id="label"></label>
+    
+    <div class="botoes">
+
+        <button type="submit" id="btnSete" class="desligado" onclick="sete()">7</button>
+        
+        <button type="submit" id="btnOito" class="desligado" onclick="oito()">8</button>
+
+        <button type="submit" id="btnNove" class="desligado" onclick="nove()">9</button>
+        
+        <button type="submit" id="btnDivi" class="desligado" onclick="div()">/</button>
+
+        <button type="submit" id="btnQuatro" class="desligado" onclick="quatro()">4</button>
+
+        <button type="submit" id="btnCinco" class="desligado" onclick="cinco()">5</button>
+
+        <button type="submit" id="btnSeis" class="desligado" onclick="seis()">6</button>
+
+        <button type="submit" id="btnMult" class="desligado" onclick="multi()">x</button>
+
+        <button type="submit" id="btnUm" class="desligado" onclick="um()">1</button>
+
+        <button type="submit" id="btnDois" class="desligado" onclick="dois()">2</button>
+
+        <button type="submit" id="btnUm" class="desligado" onclick="tres()">3</button>
+
+        <button type="submit" id="btnSub" class="desligado" onclick="sub()">-</button>
+
+        <button type="submit" id="btnMaisMenos" class="desligado" onclick="sinal()">+/-</button>
+        
+        <button type="submit" id="btnZero" class="desligado" onclick="zero()">0</button>
+
+        <button type="submit" id="btnVirgu" class="desligado" onclick="virgula()">.</button>
+
+        <button type="submit" id="btnSoma" class="desligado" onclick="soma()">+</button>
+
+        <button type="submit" id="btnLimpaUm" class="desligado" onclick="ce()">CE</button>
+
+        <button type="submit" id="btnLimpaTudo" class="desligado" onclick="c()">C</button>
+
+        <button type="submit" id="btnDeletar" class="desligado" onclick="deletar()"><img src="../Calculadora/img/apagar2.png" id="delete"/></button>
+
+        <button type="submit" id="btnTotal" class="total" onclick="total()">=</button>
+
+    </div>
+
+    <img src="../Calculadora/img/flower (1).png" id="flor1">
+    <img src="../Calculadora/img/flor1.png" id="flor2">
+
+    <img src="../Calculadora/img/blob2.png" id="blob2">
+    <img src="../Calculadora/img/blob1.png" id="blob1">
+
+    <div id="degrade1"></div>
+    <div id="degrade2"></div>
+<script>
+
+let tela = document.getElementById('tela');
+let label = document.getElementById("label");
+
+let lista = [];
+let mais = texto.split('+');
+lista = somar;
+let result;
+let texto = document.getElementById('tela');
+
+
+function numeros(A, B)
+{
+    this.A = 10;
+}
+
+function um()
+{
+    let texto = tela.value;
+    let numero = lista[0];
+
+    if (tela.value == "0")
+    {
+        tela.value = 1;
+    }
+
+    else if (texto.includes('+0'))
+    {
+        tela.value = numero + "+1";
+    }
+
+    else if (texto.includes('-0'))
+    {
+        tela.value = numero + "-1";
+    }
+
+    else if (texto.includes('*0'))
+    {
+        tela.value = numero + '*1';
+    }
+
+    else if (texto.includes('/0'))
+    {
+        tela.value = numero + '/1';
+    }
+
+    else
+    {
+        tela.value += 1;
+    }
+
+    console.log(texto.value);
+}
+
+function dois()
+{
+    let texto = tela.value;
+    let numero = lista[0];
+
+    if (tela.value == "0")
+    {
+        tela.value = 2;
+    }
+
+    else if (texto.includes('+0'))
+    {
+        tela.value = numero + "+2";
+    }
+
+    else if (texto.includes('-0'))
+    {
+        tela.value = numero + "-2";
+    }
+
+    else if (texto.includes('*0'))
+    {
+        tela.value = numero + '*2';
+    }
+
+    else if (texto.includes('/0'))
+    {
+        tela.value = numero + '/2';
+    }
+
+    else
+    {
+        tela.value += 2;
+    }
+}
+
+function tres()
+{
+    let texto = tela.value;
+    let numero = lista[0];
+
+    if (tela.value == "0")
+    {
+        tela.value = 3;
+    }
+
+    else if (texto.includes('+0'))
+    {
+        tela.value = numero + "+3";
+    }
+
+    else if (texto.includes('-0'))
+    {
+        tela.value = numero + "-3";
+    }
+
+    else if (texto.includes('*0'))
+    {
+        tela.value = numero + '*3';
+    }
+
+    else if (texto.includes('/0'))
+    {
+        tela.value = numero + '/3';
+    }
+
+    else
+    {
+        tela.value += 3;
+    }
+    
+}
+
+function quatro()
+{
+    let texto = tela.value;
+
+    let numero = lista[0];
+
+    if (tela.value == "0")
+    {
+        tela.value = 4;
+    }
+
+    else if (texto.includes('+0'))
+    {
+        tela.value = numero + "+4";
+    }
+
+    else if (texto.includes('-0'))
+    {
+        tela.value = numero + "-4";
+    }
+
+    else if (texto.includes('*0'))
+    {
+        tela.value = numero + '*4';
+    }
+
+    else if (texto.includes('/0'))
+    {
+        tela.value = numero + '/4';
+    }
+
+    else
+    {
+        tela.value += 4;
+    }
+}
+
+function cinco()
+{
+    let texto = tela.value;
+    let numero = lista[0];
+
+    if (tela.value == "0")
+    {
+        tela.value = 5;
+    }
+
+    else if (texto.includes('+0'))
+    {
+        tela.value = numero + "+5";
+    }
+
+    else if (texto.includes('-0'))
+    {
+        tela.value = numero + "-5";
+    }
+
+    else if (texto.includes('*0'))
+    {
+        tela.value = numero + '*5';
+    }
+
+    else if (texto.includes('/0'))
+    {
+        tela.value = numero + '/5';
+    }
+
+    else
+    {
+        tela.value += 5;
+    }
+}
+
+function seis()
+{
+    let texto = tela.value;
+    let numero = lista[0];
+
+    if (tela.value == "0")
+    {
+        tela.value = 6;
+    }
+
+    else if (texto.includes('+0'))
+    {
+        tela.value = numero + "+6";
+    }
+
+    else if (texto.includes('-0'))
+    {
+        tela.value = numero + "-6";
+    }
+
+    else if (texto.includes('*0'))
+    {
+        tela.value = numero + '*6';
+    }
+
+    else if (texto.includes('/0'))
+    {
+        tela.value = numero + '/6';
+    }
+
+    else
+    {
+        tela.value += 6;
+    }
+    
+}
+
+function sete()
+{
+    let texto = tela.value;
+    let numero = lista[0];
+
+    if (tela.value == "0")
+    {
+        tela.value = 7;
+    }
+
+    else if (texto.includes('+0'))
+    {
+        tela.value = numero + "+7";
+    }
+
+    else if (texto.includes('-0'))
+    {
+        tela.value = numero + "-7";
+    }
+
+    else if (texto.includes('*0'))
+    {
+        tela.value = numero + '*7';
+    }
+
+    else if (texto.includes('/0'))
+    {
+        tela.value = numero + '/7';
+    }
+
+    else
+    {
+        tela.value += 7;
+    }
+
+}
+
+function oito()
+{
+    let texto = tela.value;
+    let numero = lista[0];
+    
+    if (tela.value == "0")
+    {
+        tela.value = 8;        
+    }
+
+    else if (texto.includes('+0'))
+    {
+        tela.value = lista[0] + "+8";
+    }
+
+    else if (texto.includes('-0'))
+    {
+        tela.value = numero + "-8";
+    }
+
+    else if (texto.includes('*0'))
+    {
+        tela.value = numero + '*8';
+    }
+
+    else if (texto.includes('/0'))
+    {
+        tela.value = numero + '/8';
+    }
+
+    else
+    {
+        tela.value += 8;
+    }
+}
+
+function nove()
+{
+    let texto = tela.value;
+    let numero = lista[0];
+    
+    if (tela.value == "0")
+    {
+        tela.value = 9;        
+    }
+
+    else if (texto.includes('+0'))
+    {
+        tela.value = lista[0] + "+9";
+    }
+
+    else if (texto.includes('-0'))
+    {
+        tela.value = numero + "-9";
+    }
+
+    else if (texto.includes('*0'))
+    {
+        tela.value = numero + '*9';
+    }
+
+    else if (texto.includes('/0'))
+    {
+        tela.value = numero + '/9';
+    }
+
+    else
+    {
+    tela.value += 9;
+    }
+}
+
+function zero()
+{
+    let texto = tela.value;
+    let ultima = texto.substr(texto.length -1)
+
+    if (tela.value == "0" || texto.includes('+0') )
+    {
+        tela.value += "";   
+    }
+
+    else
+    {
+        tela.value += 0;
+    }
+    
+}
+
+function sinal()
+{
+    let texto = tela.value;
+    let mais = texto.split('+');
+    
+    lista = mais;
+    
+
+    if (texto.includes('+'))
+    {
+        let positivo1 = lista[1].replace('-','');
+
+        if (lista[1] > 0)
+        {
+            tela.value = lista[0] + '+-' + lista[1];
+        }
+
+        else
+        {
+            tela.value = lista[0] + '+' + positivo1;
+        }
+    }
+
+    else if (texto.includes('*'))
+    {
+        let mult = texto.split('*');
+        lista = mult;
+
+        let positivo = lista[1].replace('-','');
+
+        if (lista[1] > 0)
+        {
+            tela.value = lista[0] + '*-' + lista[1];
+        }
+
+        else
+        {
+            tela.value = lista[0] + '*' + positivo;
+        }
+    }
+    
+    else if (texto.includes('/'))
+    {
+        let mult = texto.split('/');
+        lista = mult;
+
+        let positivo = lista[1].replace('-','');
+
+        if (lista[1] > 0)
+        {
+            tela.value = lista[0] + '/-' + lista[1];
+        }
+
+        else
+        {
+            tela.value = lista[0] + '/' + positivo;
+        }
+    }
+
+    else if (texto.charAt(0) != '-' && texto.includes('-'))
+    {
+        
+        let menos = texto.split('-');
+        lista = menos;
+
+        let positivo = lista[1].replace('-','');
+
+        if (lista[1] > 0)
+        {
+            tela.value = lista[0] + '--' + lista[1];
+        }
+
+        else
+        {
+            tela.value = lista[0] + '-' + lista[2];
+        }
+    }
+
+    else
+    {
+        
+        lista[0] = parseFloat(tela.value);
+
+        if (lista[0] > 0)
+        {
+            tela.value = '-' + lista[0];
+        }
+
+        else
+        {
+            let positivo2 = texto.replace('-','');   
+            tela.value = positivo2;
+        }
+    }
+}
+
+function virgula()
+{
+    let texto = tela.value
+    let ultima = texto.substr(texto.length -1)
+    lista[0] = texto;
+
+    
+    if (ultima == '-' || ultima == '+' || ultima == '/' || ultima == '*'
+        || ultima == '.' || lista[0].includes('.'))
+    {
+        tela.value += "";
+    }
+
+    else if (texto == "")
+    {
+        tela.value = '';
+    }
+
+    else
+    {
+        tela.value += '.';
+        console.log('pontoo')
+    }
+
+    if (texto.includes('+'))
+    {
+        debugger;
+        let mais = texto.split('+');
+        lista = mais;
+
+        if (lista[1].includes('.'))
+        {
+            tela.value += '';
+        }
+
+        else
+        {
+            tela.value += '.';
+        }
+
+    }
+
+    else if (texto.includes('-'))
+    {
+        let sub = texto.split('-');
+        lista = sub;
+
+       
+        if (lista[1].includes('.') || texto == '-' || ultima == '-')
+        {
+            tela.value += '';
+        }
+
+        else
+        {
+            tela.value += '';
+            console.log('menos');
+        }
+    }
+
+    else if (texto.includes('*'))
+    {
+        let mult = texto.split('*');
+        lista = mult;
+
+       
+        if (lista[1].includes('.'))
+        {
+            tela.value += '';
+        }
+
+        else
+        {
+            tela.value += '';
+        }
+    }
+
+    if (texto.includes('/'))
+    {
+        let div = texto.split('/');
+        lista = div;
+  
+        if (lista[1].includes('.'))
+        {
+            tela.value += '';
+        }
+
+        else
+        {
+            tela.value += '';
+        }
+
+    }
+
+    else
+    {
+        lista[0] = texto;
+
+        if (texto == '' || texto == '-')
+        {
+            tela.value += '';
+        }
+
+        else if (lista[0].includes('.'))
+        {
+            tela.value += "";
+           
+        }
+
+    }
+
+    
+}
+
+function deletar()
+{
+    let tirar;
+    tirar = tela.value.slice(0, -1);
+    tela.value = tirar;
+}
+
+function c()
+{
+    tela.value = "0";
+    label.innerHTML = "";
+}
+
+function ce()
+{
+    let texto = tela.value;
+
+    if (texto.includes('-'))
+    {
+        let conta = texto.split('-');
+        lista = conta;
+    }
+
+    else if (texto.includes('+'))
+    {
+        let conta = texto.split('+');
+        lista = conta;
+    }
+
+    else if (texto.includes('*'))
+    {
+        let conta = texto.split('*');
+        lista = conta;
+    }
+
+    else if (texto.includes('/'))
+    {
+        let conta = texto.split('/');
+        lista = conta;
+    }
+
+    if (texto.includes(lista[1]))
+    {
+        if (texto.includes('-'))
+        {
+            tela.value = lista[0] + "-0";
+        }
+
+        else if (texto.includes('+'))
+        {
+            tela.value = lista[0] + "+0";
+        }
+
+        else if (texto.includes('*'))
+        {
+            tela.value = lista[0] + "*0";
+        }
+
+        else if (texto.includes('/'))
+        {
+            tela.value = lista[0] + "/0";
+        }
+       
+    }
+
+    else
+    {
+        tela.value = "";
+    }
+}
+
+function menos()
+{
+    let texto = tela.value;
+
+        let conta = texto.split('-');
+
+        lista = conta;
+    
+    let total = parseFloat (lista[0]) - parseFloat (lista[1]);
+    this.A = total;
+
+    label.innerHTML = lista[0] + '-' + lista[1] + '=';
+}
+
+function somar()
+{
+    let texto = tela.value;
+    let conta = texto.split('+');
+
+    lista = conta;
+    console.log(lista);
+
+    let total = parseFloat(lista[0]) + parseFloat (lista[1]);
+    this.A = total;
+
+    label.innerHTML = lista[0] + '+' + lista[1] + '=';
+    
+}
+
+function multiplicar()
+{
+    let texto = tela.value;
+    let numeros = texto.split('*');
+
+    tela.value += "";
+
+    lista = numeros;
+
+    let total = parseFloat(lista[0]) * parseFloat(lista[1]);
+    this.A = total;
+
+    label.innerHTML = lista[0] + 'x' + lista[1] + '=';
+}
+
+function dividir()
+{
+    let texto = tela.value;
+    let numeros = texto.split('/');
+
+    tela.value += "";
+
+    lista = numeros;
+
+    let total = parseFloat(lista[0]) / parseFloat(lista[1]);
+    this.A = total;
+
+    label.innerHTML = lista[0] + '/' + lista[1] + '=';
+}
+
+function soma()
+{
+    
+    let texto = tela.value;
+    let ultimo = texto.substr(texto.length -1);
+    
+    let numeros;
+    let total;
+    let vazio = "";
+    let teste = '++';
+    let algo = 0
+
+    if (tela.value == "")
+    {  
+        tela.value = "";
+    }
+    
+    else
+    {
+        if (ultimo == "-")
+        {
+            tela.value += ultimo.replace("-","+");
+        }
+
+        else if (ultimo == "*")
+        {
+            tela.value = tela.value.replace("*","+");
+        }
+
+        else if (ultimo == "/")
+        {
+            tela.value = tela.value.replace("/","+");
+        }
+
+        else if (ultimo == "+")
+        {
+            tela.value += '';
+        }
+
+        // else
+        // {
+        //     tela.value += '+';
+        // }
+
+        // if (texto.includes('.'))
+        // {
+           
+        // }
+
+        else if (texto.includes("+") || texto.includes('-') || texto.includes('*') ||
+                    texto.includes('/'))
+        {
+           total = eval(texto);
+           tela.value = total + '+';
+           label.innerHTML = texto + '='; 
+
+        
+
+      
+            // somar();
+
+            // let obj = {};
+
+            // let total = somar.call(obj);
+            // tela.value = obj.A + '+';
+        }
+
+        
+        
+        // else if (texto.charAt(0) != '-' && lista[0] > 0)
+        // {
+        //     menos();
+
+        //     let obj = {};
+
+        //     let total = menos.call(obj);
+        //     tela.value = obj.A + '+';
+        // }
+
+        // else if (texto.includes('*'))
+        // {
+        //     multiplicar();
+
+        //     let obj = {};
+
+        //     let total = multiplicar.call(obj);
+        //     tela.value = obj.A + '+';
+        // }
+
+        // else if (texto.includes('/'))
+        // {
+        //     dividir();
+
+        //     let obj = {};
+
+        //     let total = dividir.call(obj);
+        //     tela.value = obj.A + '+';
+        // }
+
+        else
+        {   
+            tela.value += '+';
+        }
+    }
+    
+}
+
+function sub()
+{
+    let texto = tela.value;
+    let vazio = "";
+    let ultimo = texto.substr(texto.length -1);
+    
+    
+    let numeros;
+    let conta;
+    let total;
+
+    if (tela.value == "" || texto == '0')
+    {   
+        tela.value = '-';
+    }
+
+    else
+    {   
+        if (ultimo == "+")
+        {
+            tela.value = tela.value.replace("+","-");
+        }
+
+        else if (ultimo == "*")
+        {
+            tela.value = tela.value.replace("*","-");
+        }
+
+        else if (ultimo == "/")
+        {
+            tela.value = tela.value.replace("/","-");
+        }
+
+        else if (ultimo == '-')
+        {
+            tela.value += '';
+        }
+
+        else if(texto.includes('-') || texto.includes('+') || texto.includes('*') 
+                    || texto.includes('/'))
+        {
+            total = eval(texto);
+            tela.value = total + '-';
+            label.innerHTML = texto + '=';
+
+           
+            // menos()
+            
+            // let obj ={};
+
+            // let sub = menos.call(obj);
+            // tela.value = obj.A + '-';
+        }
+
+        // else if (texto.includes('+'))
+        // {
+        //     somar();
+
+        //     let obj = {};
+
+        //     let total = somar.call(obj);
+        //     tela.value = obj.A + '-';
+        // }
+
+        // else if (texto.includes('*'))
+        // {
+        //    multiplicar();
+
+        //    let obj = {};
+
+        //    let total = multiplicar.call(obj);
+        //    tela.value = obj.A + '-';
+        // }
+
+        // else if (texto.includes('/'))
+        // {
+        //     dividir();
+
+        //     let obj = {};
+
+        //     let total = dividir.call(obj);
+        //     tela.value = obj.A + '-';
+        // }
+
+        else
+        {
+            tela.value += '-';
+        }
+    }
+}
+
+function multi()
+{
+    let texto = tela.value;
+    let numeros;
+    let total;
+    let ultimo = texto.substr(texto.length -1);
+
+    if (tela.value == "")
+    {
+        tela.value = "";        
+    }
+
+    else
+    {
+        if (ultimo == "-")
+        {
+            tela.value = tela.value.replace("-","*");
+        }
+
+        else if (ultimo == "+")
+        {
+            tela.value = tela.value.replace("+","*");
+        }
+
+        else if (ultimo == "/")
+        {
+            tela.value = tela.value.replace("/","*");
+        }
+
+        else if (ultimo == '*')
+        {
+            tela.value += '';
+        }
+
+        else if (texto.includes('*') || texto.includes('+') || texto.includes('-') ||
+                texto.includes('+') || texto.includes('/'))
+        {
+            total = eval(texto);
+            tela.value = total + '*';
+            label.innerHTML = texto + '='
+
+            
+            //multiplicar();
+
+            //let obj = {};
+
+            //let total = multiplicar.call(obj);
+            //tela.value = obj.A + '*';
+        }
+
+        // else if (texto.includes('-'))
+        // {
+            
+        // }
+
+        // else if (texto.charAt(0) != '-' && lista[0] > 0)
+        // {
+        //     menos()
+        
+        //     let obj = {};
+
+        //     let total = menos.call(obj);
+        //     tela.value = obj.A + '*';
+        // }
+
+        // else if (texto.includes('+'))
+        // {
+        //    somar();
+
+        //    let obj = {};
+
+        //    let total = somar.call(obj);
+        //    tela.value = obj.A + '*';
+        // }
+
+        // else if (texto.includes('/'))
+        // {
+        //     dividir();
+
+        //     let obj = {};
+
+        //     let total = dividir.call(obj);
+        //     tela.value = obj.A + '*';
+        // }
+
+        else
+        {
+            tela.value += '*';
+        }
+    }
+}
+
+function div()
+{
+    let texto = tela.value;
+    let numeros;
+    let ultimo = texto.substr(texto.length -1);
+    let total;
+
+    if (tela.value == "")
+    {
+        tela.value = "";
+    }
+
+    else 
+    {
+        if (ultimo == "-")
+        {
+            tela.value = tela.value.replace("-","/");
+        }
+
+        else if (ultimo == "*")
+        {
+            tela.value = tela.value.replace("*","/");
+        }
+
+        else if (ultimo == "+")
+        {
+            tela.value = tela.value.replace("+","/");
+        }
+
+        else if (ultimo == '/')
+        {
+            tela.value += '';
+        }
+
+        else if (texto.includes('/') || texto.includes('*') || texto.includes('-') ||
+                    texto.includes('+'))
+        {
+            total = eval(texto);
+            tela.value = total + '/'
+            label.innerHTML = texto + '=';
+
+           
+            // dividir();
+
+            // let obj = {};
+
+            // let total = dividir.call(obj);
+            // tela.value = obj.A + '/';
+        }
+
+        // else if (texto.includes('+'))
+        // {
+        //    somar();
+
+        //    let obj = {};
+        //    let total = somar.call(obj);
+        //    tela.value = obj.A + '/';
+        // }
+
+        // else if(texto.charAt(0) != '-' && lista[0] > 0)
+        // {
+        //     menos();
+
+        //     let obj = {};
+        //     let total = menos.call(obj);
+        //     tela.value = obj.A + '/';
+        // }
+
+        // else if (texto.includes('*'))
+        // {
+        //     multiplicar();
+
+        //     let obj = {};
+
+        //     let total = multiplicar.call(obj);
+        //     tela.value = obj.A + '/'
+        // }
+
+        else
+        {
+            tela.value += '/';
+        }
+    }
+}
+
+function total()
+{
+    let texto = tela.value;
+    let label = document.getElementById("label");
+    let ultimo = texto.substr(texto.length -1);
+
+       
+        let total = eval(texto)
+        tela.value = texto + '=' + total;
+
+        
+        // somar();
+
+        // let obj = {};
+        // let total = somar.call(obj);
+
+        // tela.value = lista[0] + "+" + lista [1] + "=" + obj.A;
+        // label.innerHTML = '';
+        
+        //  if (texto.includes(obj.A))
+        // {
+        //     tela.value = '';
+        // }
+    
+
+    // if (texto.includes(sub))
+    // {
+    //    menos();
+
+    //    let obj = {};
+    //    let total = menos.call(obj);
+    //    tela.value = lista[0] + "-" + lista [1] + "=" + obj.A + "";
+    //    label.innerHTML = '';
+
+    //     if (texto.includes(obj.A))
+    //     {
+    //         tela.value = '';
+    //     }
+    // }
+
+    // else if (texto.includes(mult))
+    // {
+    //     multiplicar();
+
+    //     let obj = {};
+    //     let total = multiplicar.call(obj);
+    //     tela.value = lista[0] + "x" + lista [1] + "=" + obj.A;
+    //     label.innerHTML = '';
+
+    //     if (texto.includes(obj.A))
+    //     {
+    //         tela.value = '';
+    //     }
+    // }
+
+    // else if (texto.includes(div))
+    // {
+    //     dividir();
+
+    //     let obj = {};
+    //     let total = dividir.call(obj);
+    //     tela.value = lista[0] + "/" + lista [1] + "=" + obj.A;
+    //     label.innerHTML = '';
+
+    //     if (texto.includes(obj.A))
+    //     {
+    //         tela.value = '';
+    //     }
+    // }
+
+    // else if (ultimo == '*' || ultimo == '-' || ultimo == '+' || ultimo == '/')
+    // {
+    //     tela.value = 'teste';
+    // }
+}
+
+</script>
+
+<script src="/CalcuJava.js"></script>
+</body>
+</html>
