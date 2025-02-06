@@ -1,11 +1,11 @@
 @font-face {
     font-family: pixel;
-    src: url(../Site/Better\ VCR\ 9.0.1.ttf);
+    src: url(./Better\ VCR\ 9.0.1.ttf);
 }
 
 @font-face {
     font-family: lemon;
-    src: url(../Site/LEMONMILK-Light.otf);
+    src: url(./LEMONMILK-Light.otf);
 }
 
 body
