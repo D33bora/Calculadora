@@ -127,7 +127,7 @@ h1
 
 #btnDeletar :hover
 {
-    content: url(../Site/img/apagar1.png);
+    content: url(./img/apagar1.png);
 }
 
 #blob2
