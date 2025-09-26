@@ -18,27 +18,27 @@
     
     <div class="botoes">
 
-        <button type="submit" id="btnSete" class="desligado" onclick="sete()">7</button>
+        <button type="submit" id="btnSete" class="desligado" onclick="numeros(7)">7</button>
         
-        <button type="submit" id="btnOito" class="desligado" onclick="oito()">8</button>
+        <button type="submit" id="btnOito" class="desligado" onclick="numeros(8)">8</button>
 
-        <button type="submit" id="btnNove" class="desligado" onclick="nove()">9</button>
+        <button type="submit" id="btnNove" class="desligado" onclick="numeros(9)">9</button>
         
         <button type="submit" id="btnDivi" class="desligado" onclick="div()">/</button>
 
-        <button type="submit" id="btnQuatro" class="desligado" onclick="quatro()">4</button>
+        <button type="submit" id="btnQuatro" class="desligado" onclick="numeros(4)">4</button>
 
-        <button type="submit" id="btnCinco" class="desligado" onclick="cinco()">5</button>
+        <button type="submit" id="btnCinco" class="desligado" onclick="numeros(5)">5</button>
 
-        <button type="submit" id="btnSeis" class="desligado" onclick="seis()">6</button>
+        <button type="submit" id="btnSeis" class="desligado" onclick="numeros(6)">6</button>
 
         <button type="submit" id="btnMult" class="desligado" onclick="multi()">x</button>
 
-        <button type="submit" id="btnUm" class="desligado" onclick="um()">1</button>
+        <button type="submit" id="btnUm" class="desligado" onclick="numeros(1)">1</button>
 
-        <button type="submit" id="btnDois" class="desligado" onclick="dois()">2</button>
+        <button type="submit" id="btnDois" class="desligado" onclick="numeros(2)">2</button>
 
-        <button type="submit" id="btnUm" class="desligado" onclick="tres()">3</button>
+        <button type="submit" id="btnUm" class="desligado" onclick="numeros(3)">3</button>
 
         <button type="submit" id="btnSub" class="desligado" onclick="sub()">-</button>
 
@@ -90,12 +90,7 @@ let result;
 let texto = document.getElementById('tela');
 
 
-function numeros(A, B)
-{
-    this.A = 10;
-}
-
-function um()
+function numeros (digito)
 {
     let texto = tela.value;
     let numero = lista[0];
@@ -103,340 +98,39 @@ function um()
 
     if (tela.value == "0")
     {
-        tela.value = 1;
+        tela.value = digito;
     }
 
     else if (ultima == 0 && texto.includes('+0'))
     {
-        tela.value = texto.replace(/.$/,'1');
+        tela.value = texto.replace(/.$/, digito);
     }
 
     else if (ultima == 0 && texto.includes('-0'))
     {
-        tela.value = texto.replace(/.$/,'1');
+        tela.value = texto.replace(/.$/, digito);
     }
 
     else if (ultima == 0 && texto.includes('*0'))
     {
-        tela.value = texto.replace(/.$/,'1');
+        tela.value = texto.replace(/.$/, digito);
     }
 
     else if (ultima == 0 && texto.includes('/0'))
     {
-        tela.value = texto.replace(/.$/,'1');
+        tela.value = texto.replace(/.$/, digito);
     }
 
     else if (ultima == '.' || tela.value == 0)
     {
-        tela.value += 1;
+        tela.value += digito;
     }
     else
     {
-        tela.value += 1;
+        tela.value += digito;
     }
 
     console.log(texto.value);
-}
-
-function dois()
-{
-    let texto = tela.value;
-    let numero = lista[0];
-    let ultima = texto.substr(texto.length -1);
-
-    if (tela.value == "0")
-    {
-        tela.value = 2;
-    }
-
-    else if (ultima == '0' && texto.includes('+0'))
-    {
-        tela.value = texto.replace(/.$/,'2');
-    }
-
-    else if (ultima == 0 && texto.includes('-0'))
-    {
-        tela.value = texto.replace(/.$/,'2');
-    }
-
-    else if (ultima == 0 && texto.includes('*0'))
-    {
-        tela.value = texto.replace(/.$/,'2');
-    }
-
-    else if (ultima == 0 && texto.includes('/0'))
-    {
-        tela.value = texto.replace(/.$/,'2');
-    }
-
-
-    else
-    {
-        tela.value += 2;
-    }
-}
-
-function tres()
-{
-    let texto = tela.value;
-    let numero = lista[0];
-    let ultima = texto.substr(texto.length -1);
-
-    if (tela.value == "0")
-    {
-        tela.value = 3;
-    }
-
-    else if (ultima == '0' && texto.includes('+0'))
-    {
-        tela.value = texto.replace(/.$/,'3');
-    }
-
-    else if (ultima == 0 && texto.includes('-0'))
-    {
-        tela.value = texto.replace(/.$/,'3');
-    }
-
-    else if (ultima == 0 && texto.includes('*0'))
-    {
-        tela.value = texto.replace(/.$/,'3');
-    }
-
-    else if (ultima == 0 && texto.includes('/0'))
-    {
-        tela.value = texto.replace(/.$/,'3');
-    }
-
-    else
-    {
-        tela.value += 3;
-    }
-    
-}
-
-function quatro()
-{
-    let texto = tela.value;
-    let numero = lista[0];
-    let ultima = texto.substr(texto.length -1);
-
-    if (tela.value == "0")
-    {
-        tela.value = 4;
-    }
-
-    else if (ultima == '0' && texto.includes('+0'))
-    {
-        tela.value = texto.replace(/.$/,'4');
-    }
-
-    else if (ultima == 0 && texto.includes('-0'))
-    {
-        tela.value = texto.replace(/.$/,'4');
-    }
-
-    else if (ultima == 0 && texto.includes('*0'))
-    {
-        tela.value = texto.replace(/.$/,'4');
-    }
-
-    else if (ultima == 0 && texto.includes('/0'))
-    {
-        tela.value = texto.replace(/.$/,'4');
-    }
-
-    else
-    {
-        tela.value += 4;
-    }
-}
-
-function cinco()
-{
-    let texto = tela.value;
-    let numero = lista[0];
-    let ultima = texto.substr(texto.length -1);
-
-    if (tela.value == "0")
-    {
-        tela.value = 5;
-    }
-
-    else if (ultima == '0' && texto.includes('+0'))
-    {
-        tela.value = texto.replace(/.$/,'5');
-    }
-
-    else if (ultima == 0 && texto.includes('-0'))
-    {
-        tela.value = texto.replace(/.$/,'5');
-    }
-
-    else if (ultima == 0 && texto.includes('*0'))
-    {
-        tela.value = texto.replace(/.$/,'5');
-    }
-
-    else if (ultima == 0 && texto.includes('/0'))
-    {
-        tela.value = texto.replace(/.$/,'5');
-    }
-
-    else
-    {
-        tela.value += 5;
-    }
-}
-
-function seis()
-{
-    let texto = tela.value;
-    let numero = lista[0];
-    let ultima = texto.substr(texto.length -1);
-
-    if (tela.value == "0")
-    {
-        tela.value = 6;
-    }
-
-    else if (ultima == '0' && texto.includes('+0'))
-    {
-        tela.value = texto.replace(/.$/,'6');
-    }
-
-    else if (ultima == 0 && texto.includes('-0'))
-    {
-        tela.value = texto.replace(/.$/,'6');
-    }
-
-    else if (ultima == 0 && texto.includes('*0'))
-    {
-        tela.value = texto.replace(/.$/,'6');
-    }
-
-    else if (ultima == 0 && texto.includes('/0'))
-    {
-        tela.value = texto.replace(/.$/,'6');
-    }
-
-    else
-    {
-        tela.value += 6;
-    }
-    
-}
-
-function sete()
-{
-    let texto = tela.value;
-    let numero = lista[0];
-    let ultima = texto.substr(texto.length -1);
-
-    if (tela.value == "0")
-    {
-        tela.value = 7;
-    }
-
-    else if (ultima == '0' && texto.includes('+0'))
-    {
-        tela.value = texto.replace(/.$/,'7');
-    }
-
-    else if (ultima == 0 && texto.includes('-0'))
-    {
-        tela.value = texto.replace(/.$/,'7');
-    }
-
-    else if (ultima == 0 && texto.includes('*0'))
-    {
-        tela.value = texto.replace(/.$/,'7');
-    }
-
-    else if (ultima == 0 && texto.includes('/0'))
-    {
-        tela.value = texto.replace(/.$/,'7');
-    }
-
-    else
-    {
-        tela.value += 7;
-    }
-
-}
-
-function oito()
-{
-    let texto = tela.value;
-    let numero = lista[0];
-    let ultima = texto.substr(texto.length -1);
-    
-    if (tela.value == "0")
-    {
-        tela.value = 8;        
-    }
-
-    else if (ultima == '0' && texto.includes('+0'))
-    {
-        tela.value = texto.replace(/.$/,'8');
-    }
-
-    else if (ultima == 0 && texto.includes('-0'))
-    {
-        tela.value = texto.replace(/.$/,'8');
-    }
-
-    else if (ultima == 0 && texto.includes('*0'))
-    {
-        tela.value = texto.replace(/.$/,'8');
-    }
-
-    else if (ultima == 0 && texto.includes('/0'))
-    {
-        tela.value = texto.replace(/.$/,'8');
-    }
-
-    else
-    {
-        tela.value += 8;
-    }
-}
-
-function nove()
-{
-    let texto = tela.value;
-    let numero = lista[0];
-    let ultima = texto.substr(texto.length -1);
-    
-    if (tela.value == "0")
-    {
-        
-        tela.value = 9;        
-    }
-
-    else if (ultima == '0' && texto.includes('+0'))
-    {
-        tela.value = texto.replace(/.$/,'9');
-    }
-
-    else if (ultima == 0 && texto.includes('-0'))
-    {
-        tela.value = texto.replace(/.$/,'9');
-    }
-
-    else if (ultima == 0 && texto.includes('*0'))
-    {
-        tela.value = texto.replace(/.$/,'9');
-    }
-
-    else if (ultima == 0 && texto.includes('/0'))
-    {
-        tela.value = texto.replace(/.$/,'9');
-    }
-
-    else
-    {
-    tela.value += 9;
-    }
 }
 
 function zero()
@@ -588,9 +282,7 @@ function virgula()
     
     else
     {
-        
         tela.value += '.';
-        console.log('pontoo')
     }
 
     if (texto.includes('+'))
@@ -766,7 +458,6 @@ function ce()
         {
             tela.value = lista[0] + "/0";
         }
-       
     }
 
     else
@@ -801,7 +492,6 @@ function somar()
     this.A = total;
 
     label.innerHTML = lista[0] + '+' + lista[1] + '=';
-    
 }
 
 function multiplicar()
@@ -836,11 +526,8 @@ function dividir()
 
 function soma()
 {
-    
     let texto = tela.value;
     let ultimo = texto.substr(texto.length -1);
-    
-    
     let total;
     let vazio = "";
     let teste = '++';
@@ -1123,10 +810,9 @@ function total()
     let texto = tela.value;
     let label = document.getElementById("label");
     let ultimo = texto.substr(texto.length -1);
-
-       
-        let total = eval(texto)
-        tela.value = texto + '=' + total;
+    let total = eval(texto)
+    
+    tela.value = texto + '=' + total;
 }
 
 </script>
