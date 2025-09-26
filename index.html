@@ -5,16 +5,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora!!!!</title>
-    <link rel="stylesheet" href="CalcuCss.css">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
     
-
 </head>
 
 <body>
 
-    <h1>Calculadora</h1>
-    <input type="text" id="tela" ></label>
+    <h1 style="cursor: default;">Calculadora</h1>
+    <input type="text" id="tela" disabled></label>
     <label id="label"></label>
     
     <div class="botoes">
@@ -55,31 +54,31 @@
 
         <button type="submit" id="btnLimpaTudo" class="desligado" onclick="c()">C</button>
 
-        <button type="submit" id="btnDeletar" class="desligado" onclick="deletar()"><img src="./img/apagar2.png" id="delete"/></button>
+        <button type="submit" id="btnDeletar" class="desligado" onclick="deletar()"><img src="./assets/img/apagar2.png" id="delete"/></button>
 
         <button type="submit" id="btnTotal" class="total" onclick="total()">=</button>
 
     </div>
 
-    <img src="./img/flor1.png" id="flor2">
+    <img src="./assets/img/flor2.png" id="flor2">
 
     <div id="spam">
         <div  class="flor">
-    <img src="./img/flower (1).png" id="flor1">
-</div>
+        <img src="./assets/img/flor1.png" id="flor1">
+    </div>
 
         <div class="flores" id="mensagem">
             <span class="mensagem" id="men">Olá, seja bem vindo!</span>
         </div>
     </div>
 
-    <img src="./img/blob1.png" id="blob1">
-    <img src="./img/blob2.png" id="blob2">
+    <img src="./assets/img/blob1.png" id="blob1">
+    <img src="./assets/img/blob2.png" id="blob2">
 
     <div id="degrade1"></div>
     <div id="degrade2"></div>    
 
-<script>
+<script lang="javascript">
 
 let tela = document.getElementById('tela');
 let label = document.getElementById("label");
@@ -901,45 +900,7 @@ function soma()
            {
             label.innerHTML = texto + '='; 
            }
-      
-            // somar();
-
-            // let obj = {};
-
-            // let total = somar.call(obj);
-            // tela.value = obj.A + '+';
         }
-
-        
-        // else if (texto.charAt(0) != '-' && lista[0] > 0)
-        // {
-        //     menos();
-
-        //     let obj = {};
-
-        //     let total = menos.call(obj);
-        //     tela.value = obj.A + '+';
-        // }
-
-        // else if (texto.includes('*'))
-        // {
-        //     multiplicar();
-
-        //     let obj = {};
-
-        //     let total = multiplicar.call(obj);
-        //     tela.value = obj.A + '+';
-        // }
-
-        // else if (texto.includes('/'))
-        // {
-        //     dividir();
-
-        //     let obj = {};
-
-        //     let total = dividir.call(obj);
-        //     tela.value = obj.A + '+';
-        // }
 
         else
         {   
@@ -1010,43 +971,7 @@ function sub()
            {
                 label.innerHTML = texto + '=';
            }
-            // menos()
-            
-            // let obj ={};
-
-            // let sub = menos.call(obj);
-            // tela.value = obj.A + '-';
         }
-
-        // else if (texto.includes('+'))
-        // {
-        //     somar();
-
-        //     let obj = {};
-
-        //     let total = somar.call(obj);
-        //     tela.value = obj.A + '-';
-        // }
-
-        // else if (texto.includes('*'))
-        // {
-        //    multiplicar();
-
-        //    let obj = {};
-
-        //    let total = multiplicar.call(obj);
-        //    tela.value = obj.A + '-';
-        // }
-
-        // else if (texto.includes('/'))
-        // {
-        //     dividir();
-
-        //     let obj = {};
-
-        //     let total = dividir.call(obj);
-        //     tela.value = obj.A + '-';
-        // }
 
         else
         {
@@ -1060,8 +985,6 @@ function multi()
     let texto = tela.value;
     let total;
     let ultimo = texto.substr(texto.length -1);
-   //let result = eval(texto);
-   //let numeros = texto.split('/');
 
     if (tela.value == "")
     {
@@ -1117,49 +1040,7 @@ function multi()
             {
                 label.innerHTML = texto + '=';
             }
-            //multiplicar();
-
-            //let obj = {};
-
-            //let total = multiplicar.call(obj);
-            //tela.value = obj.A + '*';
         }
-
-        
-        // else if (texto.includes('-'))
-        // {
-            
-        // }
-
-        // else if (texto.charAt(0) != '-' && lista[0] > 0)
-        // {
-        //     menos()
-        
-        //     let obj = {};
-
-        //     let total = menos.call(obj);
-        //     tela.value = obj.A + '*';
-        // }
-
-        // else if (texto.includes('+'))
-        // {
-        //    somar();
-
-        //    let obj = {};
-
-        //    let total = somar.call(obj);
-        //    tela.value = obj.A + '*';
-        // }
-
-        // else if (texto.includes('/'))
-        // {
-        //     dividir();
-
-        //     let obj = {};
-
-        //     let total = dividir.call(obj);
-        //     tela.value = obj.A + '*';
-        // }
 
         else
         {
@@ -1228,41 +1109,7 @@ function div()
            {
                 label.innerHTML = texto + '=';
            }
-            // dividir();
-
-            // let obj = {};
-
-            // let total = dividir.call(obj);
-            // tela.value = obj.A + '/';
         }
-
-        // else if (texto.includes('+'))
-        // {
-        //    somar();
-
-        //    let obj = {};
-        //    let total = somar.call(obj);
-        //    tela.value = obj.A + '/';
-        // }
-
-        // else if(texto.charAt(0) != '-' && lista[0] > 0)
-        // {
-        //     menos();
-
-        //     let obj = {};
-        //     let total = menos.call(obj);
-        //     tela.value = obj.A + '/';
-        // }
-
-        // else if (texto.includes('*'))
-        // {
-        //     multiplicar();
-
-        //     let obj = {};
-
-        //     let total = multiplicar.call(obj);
-        //     tela.value = obj.A + '/'
-        // }
 
         else
         {
@@ -1280,70 +1127,6 @@ function total()
        
         let total = eval(texto)
         tela.value = texto + '=' + total;
-
-        // somar();
-
-        // let obj = {};
-        // let total = somar.call(obj);
-
-        // tela.value = lista[0] + "+" + lista [1] + "=" + obj.A;
-        // label.innerHTML = '';
-        
-        //  if (texto.includes(obj.A))
-        // {
-        //     tela.value = '';
-        // }
-    
-
-    // if (texto.includes(sub))
-    // {
-    //    menos();
-
-    //    let obj = {};
-    //    let total = menos.call(obj);
-    //    tela.value = lista[0] + "-" + lista [1] + "=" + obj.A + "";
-    //    label.innerHTML = '';
-
-    //     if (texto.includes(obj.A))
-    //     {
-    //         tela.value = '';
-    //     }
-    // }
-
-    // else if (texto.includes(mult))
-    // {
-    //     multiplicar();
-
-    //     let obj = {};
-    //     let total = multiplicar.call(obj);
-    //     tela.value = lista[0] + "x" + lista [1] + "=" + obj.A;
-    //     label.innerHTML = '';
-
-    //     if (texto.includes(obj.A))
-    //     {
-    //         tela.value = '';
-    //     }
-    // }
-
-    // else if (texto.includes(div))
-    // {
-    //     dividir();
-
-    //     let obj = {};
-    //     let total = dividir.call(obj);
-    //     tela.value = lista[0] + "/" + lista [1] + "=" + obj.A;
-    //     label.innerHTML = '';
-
-    //     if (texto.includes(obj.A))
-    //     {
-    //         tela.value = '';
-    //     }
-    // }
-
-    // else if (ultimo == '*' || ultimo == '-' || ultimo == '+' || ultimo == '/')
-    // {
-    //     tela.value = 'teste';
-    // }
 }
 
 </script>
